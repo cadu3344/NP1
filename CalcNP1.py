@@ -7,6 +7,7 @@ def Menu():
     print("3 - Multiplicar")
     print("4 - Dividir")
     print("5 - Bhaskara")
+    print("6 - Definição de triangulos")
     print("0 - Sair")
     
      
@@ -30,6 +31,15 @@ def bhaskara(a,b,c):
         x1 = (-b + math.sqrt(delta)) / (2*a)
         x2 = (-b - math.sqrt(delta)) / (2*a)
         print(f"R: x1 = {x1} e x2 = {x2}")
+        
+def CalcTri(a,b,c):
+    if (a != b != c):
+        print("Triangulo escaleno")
+        
+    elif(a==b!=c or b==c!=a or a==c!=b):
+        print("Triangulo isósceles")
+    elif (a==b==c):
+        print("Triangulo equilátero")
         
 Menu()
 while True:
@@ -59,6 +69,13 @@ while True:
          a= float(input("Digite o valor A"))
          b= float(input("Digite o valor B"))
          c= float(input("Digite o valor C"))   
-         bhaskara(a,b,c) 
+         bhaskara(a,b,c)
+     elif opcao == 6:
+         a= float(input("Digite o valor A"))
+         b= float(input("Digite o valor B"))
+         c= float(input("Digite o valor C"))   
+         CalcTri(a,b,c)
      else:
          print("Não e possível")
+    
+     
