@@ -8,10 +8,12 @@ def Menu():
     print("4 - Dividir")
     print("5 - Bhaskara")
     print("6 - Definição de triangulos")
+    print("7 - Porcentagem")
     print("0 - Sair")
     
+    
      
-def soma(a,b):
+def soma(a,b): 
      return a+b
  
 def subtracao(a,b):
@@ -25,7 +27,7 @@ def divisao(a,b):
  
 def bhaskara(a,b,c):
     delta = b**2 - 4*a*c
-    if delta < 0:
+    if delta <= 0:
         print("A conta não tem resultados reais")
     else:
         x1 = (-b + math.sqrt(delta)) / (2*a)
@@ -40,7 +42,7 @@ def CalcTri(a,b,c):
         print("Triangulo isósceles")
     elif (a==b==c):
         print("Triangulo equilátero")
-        
+                
 Menu()
 while True:
      opcao = int(input("Escolha a operação"))
@@ -75,6 +77,11 @@ while True:
          b= float(input("Digite o valor B"))
          c= float(input("Digite o valor C"))   
          CalcTri(a,b,c)
+     elif opcao == 7:
+         a= float (input("Digite o valor de A"))
+         b= float (input("Digite o valor de B"))
+         R=(a /100) *b
+         print(f"R:{a} % de {b} e igual a {R}")
      else:
          print("Não e possível")
     
