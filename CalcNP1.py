@@ -10,6 +10,7 @@ def Menu():
     print("6 - Definição de triangulos")
     print("7 - Porcentagem")
     print("8 - Regra de 3 simples")
+    print("9 - Regra de 3 iversa")
     print("0 - Sair")
     
     
@@ -89,7 +90,12 @@ while True:
          c= float (input("Digite o valor de C"))
          X= b*c/a
          print(f"R: {X}")
+     elif opcao == 9:
+         a1 = float (input("Diigte o valor de A"))
+         b1 = float (input("Digite o valor de B"))
+         a2 = float (input("Digite o valor de C"))
+         b2 = (a1 * b1) / a2
+         print(f"R: {b2}")
+
      else:
          print("Não e possível")
-    
-     
