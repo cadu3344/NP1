@@ -11,6 +11,7 @@ def Menu():
     print("7 - Porcentagem")
     print("8 - Regra de 3 simples")
     print("9 - Regra de 3 iversa")
+    print("10 - Regra de 3 composta")
     print("0 - Sair")
     
     
@@ -96,6 +97,14 @@ while True:
          a2 = float (input("Digite o valor de C"))
          b2 = (a1 * b1) / a2
          print(f"R: {b2}")
-
+     elif opcao == 10:
+         a = float (input("Digite o valor de A"))
+         b = float (input("Digite o valor de B"))
+         c = float (input("Digite o valor de C"))
+         d = float (input("Digite o valor de D"))
+         e = float (input("Digite o valor de E"))
+         R= a * (b/c) * (e/d)
+         print(f"R: {R}")
+         
      else:
          print("Não e possível")
