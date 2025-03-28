@@ -1,3 +1,4 @@
+
 import math 
 
 def Menu():
@@ -107,6 +108,7 @@ while True:
         resp = ""
         cj1 = set()
         cj2 = set()
+        cj3 = set()
 
         while resp != 'exit':
             cj1.add(int(input("Insira um valor para o primeiro conjunto: ")))
@@ -119,12 +121,19 @@ while True:
             cj2.add(int(input("Insira um valor para o segundo conjunto: ")))
             resp = input("Deseja encerrar? (exit): ")
             print(cj2)
+            
+        resp = ""
+        
+        while resp != 'exit':
+            cj3.add(int(input("Insira um valor para o terceiro conjunto: ")))
+            resp = input("Deseja encerrar? (exit): ")
+            print(cj3)
 
-        print("União:", cj1 | cj2)
-        print("Interseção:", cj1 & cj2)
-        print("Diferença:", cj1 - cj2)
-        print("Diferença Simétrica:", cj1 ^ cj2)
-        prodcart = [(a, b) for a in cj1 for b in cj2]
+        print("União:", cj1 | cj2 | cj3)
+        print("Interseção:", cj1 & cj2 & cj3)
+        print("Diferença:", cj1 - cj2 - cj3)
+        print("Diferença Simétrica:", cj1 ^ cj2 ^ cj3)
+        prodcart = [(a, b, c) for a in cj1 for b in cj2 for c in cj3]
         print("Produto Cartesiano:", prodcart)
 
     else:
