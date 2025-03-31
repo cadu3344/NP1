@@ -1,5 +1,5 @@
-
 import math 
+import numpy 
 
 def Menu():
     print("\n== Calculadora ===")
@@ -124,10 +124,11 @@ while True:
             
         resp = ""
         
-        while resp != 'exit':
-            cj3.add(int(input("Insira um valor para o terceiro conjunto: ")))
-            resp = input("Deseja encerrar? (exit): ")
-            print(cj3)
+        if input("Deseja inserir um valor no terceiro conjunto?: (Sim/Não) ") != 'Sim':
+                break
+        cj3.add(int(input("Insira um valor para o terceiro conjunto: ")))
+        resp = input("Deseja encerrar? (exit): ")
+        print(cj3)
 
         print("União:", cj1 | cj2 | cj3)
         print("Interseção:", cj1 & cj2 & cj3)
